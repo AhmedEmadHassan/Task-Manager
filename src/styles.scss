@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+body
+{
+    margin:0;
+}
+
+@media screen and (max-width:750px) {
+    html
+    {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:630px) {
+    html
+    {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:530px) {
+    html
+    {
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:400px) {
+    html
+    {
+        font-size: 6px;
+    }
+}
