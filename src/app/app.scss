@@ -58,3 +58,43 @@ footer h2
     padding:0;
     margin:0;
 }
+
+
+// Button
+
+// Variables
+$primary-color: #4CAF50;
+$primary-dark: #2E7D32;
+$text-color: #ffffff;
+$shadow-color: rgba(0, 0, 0, 0.2);
+$radius: 8px;
+$transition: all 0.3s ease;
+
+// Button style
+.modern-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: $radius;
+  background: linear-gradient(135deg, $primary-color, $primary-dark);
+  color: $text-color;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition;
+  box-shadow: 0 4px 10px $shadow-color;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px $shadow-color;
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 8px $shadow-color;
+  }
+
+  &:focus {
+    outline: 2px solid lighten($primary-color, 25%);
+    outline-offset: 2px;
+  }
+}

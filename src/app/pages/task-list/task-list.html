@@ -1,20 +1,14 @@
-<ul>
-  @for (task of taskService.tasks; track task.Id) {
-    <li>
-      <div class="task-item">
-        <div class="task-content">
-          <h3>  
-            <p>{{ task.title }}</p>
-          </h3>
-          <h3>
-            <p>{{ task.description }}</p>
-          </h3>
-          <h3>
-            <p>Created: {{ task.CreatedAt }}</p>
-          </h3>
-          <br />
-        </div>
-      </div>
-    </li>
-  }
-</ul>
+@for (task of taskService.tasks(); track task.Id) {
+  <div class="task-item">
+    <div class="task-content">
+      <h3>
+        <a [routerLink]="['/task', task.Id]" routerLinkActive="router-link-active">{{
+          task.title
+        }}</a>
+      </h3>
+      <p>{{ task.description }}</p>
+      <small>Created at: {{ task.CreatedAt.toLocaleDateString() }}</small>
+      <br />
+    </div>
+  </div>
+}
